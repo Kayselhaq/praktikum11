@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Devani</title>
+    <style>
+        .container{
+            display: flex;
+            width: 500px;
+            height: 300px;
+            margin: 50px 350px;
+        }
+
+        .box{
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            height: 300px;        
+        }
+    </style>
+
+    <script>
+        function image_picker(){
+        let pilihan = document.getElementById("option");
+        const list_image = ["depi .jpg", "eva.jpg", "nisa.jpg", "bertiga.jpg", ]
+        if(pilihan.value == "depi"){
+            let select = list_image[0];
+            document.getElementById("image").src =`images/${select}`
+            alert("Ini Foto Depi")
+        }
+
+        if (pilihan.value == "eva"){
+            let select = list_image[1]
+            document.getElementById("image").src = `images/${select}`
+            alert("Ini Foto Eva")
+        }
+
+        if (pilihan.value == "nisa"){
+            let select = list_image[2]
+            document.getElementById("image").src = `images/${select}`
+            alert("Ini Foto Nisa")
+        }
+
+        if (pilihan.value == "bertiga"){
+            let select = list_image[3]
+            document.getElementById("image").src = `images/${select}`
+            alert("Ini Foto Bertiga")
+        }
+
+       
+
+        }
+    </script>
+</head>
+<body>
+    <select name="" id="option" onchange="image_picker()">
+        <option value="">Pilih Gambar : </option>
+        <option value="depi">Depi</option>
+        <option value="eva">Eva</option>
+        <option value="nisa">Nisa</option>
+        <option value="bertiga">Bertiga</option>
+       
+    </select>
+
+    <br>
+    <div class="container">
+        <div class="box">
+            <img id="image">
+        </div>
+    </div>
+</body>
+</html>
